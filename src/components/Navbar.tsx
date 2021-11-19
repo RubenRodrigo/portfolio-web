@@ -27,16 +27,9 @@ export const Navbar = ({ setNewNavState }: Props) => {
 		}
 	};
 
-	useEffect(() => {
-		changeNavbarColor()
-		// adding the event when scroll change Logo
-		window.addEventListener("scroll", changeNavbarColor, true)
-		return window.removeEventListener("scroll", changeNavbarColor)
-	}, [])
-
 	return (
 		<>
-			<div className={`${colorChange ? "bg-background" : ""} w-full fixed z-10`}>
+			<div className={`${colorChange ? "bg-background shadow-lg" : ""} w-full fixed z-10`}>
 				<div className="flex justify-between md:px-10 py-5 px-5">
 					<div className="flex-1 flex gap-10">
 						<LogoComponent />

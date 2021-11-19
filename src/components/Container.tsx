@@ -36,15 +36,21 @@ export const Container = ({ navItem }: Props) => {
 
 	const swiperScroll = function () {
 		var acs = document.querySelectorAll<any>('.swiper-slide-active')[0];
-		var hasVerticalScrollbar = acs.scrollHeight > acs.clientHeight;
+		var child = acs.firstChild;
+		console.log(child);
+		console.log("child", child.scrollHeight);
+		console.log("acs", acs.clientHeight);
+
+		var hasVerticalScrollbar = child.scrollHeight > acs.clientHeight;
+		console.log(hasVerticalScrollbar);
 
 		if (hasVerticalScrollbar) {
-			var scrollHeight = acs.scrollHeight;
+			var scrollHeight = child.scrollHeight;
 			var slideSize = acs.swiperSlideSize;
 			var scrollDifferenceTop = scrollHeight - slideSize;
 
 			acs.addEventListener('wheel', (event: any) => {
-				var scrollDifference = scrollHeight - slideSize - acs.scrollTop;
+				var scrollDifference = scrollHeight - slideSize - child.scrollTop;
 
 				// Scroll wheel browser compatibility
 				var delta = event.wheelDelta || -1 * event.deltaY;
@@ -68,15 +74,13 @@ export const Container = ({ navItem }: Props) => {
 	};
 
 	useEffect(() => {
-		console.log(navItem);
-
 		if (swiperInstance) {
 			slideTo(navItem.id);
 		}
 	}, [navItem])
 
 	return (
-		<div className="relative h-screen w-full text-white" >
+		<div className="relative h-screen w-full text-white bg-main-background" >
 			<Swiper
 				onSwiper={(s) => setSwiperInstance(s)}
 				direction={'vertical'}
@@ -86,21 +90,21 @@ export const Container = ({ navItem }: Props) => {
 				pagination={pagination}
 				onSlideChangeTransitionEnd={swiperScroll}
 				allowTouchMove={false}
-				speed={1000}
+				speed={500}
 				className="h-screen">
-				<SwiperSlide className="overflow-y-auto" virtualIndex={0}>
+				<SwiperSlide virtualIndex={0}>
 					<Home />
 				</SwiperSlide>
-				<SwiperSlide className="overflow-y-auto" virtualIndex={1}>
+				<SwiperSlide virtualIndex={1}>
 					<Profile />
 				</SwiperSlide>
-				<SwiperSlide className="overflow-y-auto" virtualIndex={2}>
+				<SwiperSlide virtualIndex={2}>
 					<Projects />
 				</SwiperSlide>
-				<SwiperSlide className="overflow-y-auto" virtualIndex={3}>
+				<SwiperSlide virtualIndex={3}>
 					<News />
 				</SwiperSlide>
-				<SwiperSlide className="overflow-y-auto" virtualIndex={4}>
+				<SwiperSlide virtualIndex={4}>
 					<Networking />
 				</SwiperSlide>
 			</Swiper>
