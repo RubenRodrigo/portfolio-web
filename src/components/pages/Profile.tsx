@@ -1,64 +1,84 @@
-import { AiOutlineCloudServer, AiOutlineDesktop } from "react-icons/ai"
-import { IoLogoJavascript, IoLogoPython } from "react-icons/io"
-import { DiCss3, DiDjango, DiJava, DiNodejsSmall, DiReact } from "react-icons/di"
-import { SiNextdotjs, SiRedux, SiSpring } from "react-icons/si"
+// import { AiOutlineCloudServer, AiOutlineDesktop } from "react-icons/ai"
+// import { IoLogoJavascript, IoLogoPython } from "react-icons/io"
+// import { DiCss3, DiDjango, DiJava, DiNodejsSmall, DiReact } from "react-icons/di"
+// import { SiNextdotjs, SiRedux, SiSpring } from "react-icons/si"
+import { BiRightArrow } from "react-icons/bi"
+import ProfileImage from '../../assets/profile_img.jpg'
+import { SubTitle } from "../SubTitle"
 
 export const Profile = () => {
 
 	return (
-		<div className="relative w-full h-full overflow-y-auto">
-			<div className="absolute top-2/4 xl:flex hidden z-10">
-				<div className="self-center">
-					<h3
-						className="font-bold relative text-8xl text-gray-title opacity-40 lg:left-1/4 top-2/4"
-						style={{ transform: "translate(-60%,-50%) rotate(-90deg)" }}
-					>
-						¿Quién soy?
-					</h3>
-				</div>
-			</div>
-			<div className="relative min-h-full bg-background z-0 flex flex-col">
-				<div
-					className="flex-1 flex max-w-screen-xl mx-auto w-full pt-24 md:pt-28 lg:pt-32 "
-				>
-					<div className="px-10 w-full self-center">
-						<div>
-
-							<h3 className="text-3xl md:text-6xl pt-10 pb-20"><span className="font-semibold text-yellow-400">Mis</span> habilidades</h3>
-							<div className="grid grid-cols-1 gap-10 w-full">
-								<div className="col-span-1 text-center">
-									<div className="text-center w-full flex justify-center">
-										<AiOutlineDesktop className="text-8xl text-yellow-400" />
-									</div>
-									<br />
-									<h3 className="text-2xl font-semibold uppercase">Desarrollo Frontend</h3>
-									<br />
-									<p>Principales tecnologias que conozco/domino</p>
-									<div className="flex text-5xl gap-5 w-full justify-around">
-										<IoLogoJavascript />
-										<DiCss3 />
-										<DiReact />
-										<SiNextdotjs />
-										<SiRedux />
-									</div>
-								</div>
-								<div className="col-span-1 text-center">
-									<div className="text-center w-full flex justify-center">
-										<AiOutlineCloudServer className="text-8xl text-yellow-400" />
-									</div>
-									<br />
-									<h3 className="text-2xl font-semibold uppercase">Desarrollo Backend</h3>
-									<br />
-									<p>Principales tecnologias que conozco/domino</p>
-									<div className="flex text-5xl gap-5 w-full justify-around">
-										<IoLogoPython />
-										<DiDjango />
-										<DiNodejsSmall />
-										<DiJava />
-										<SiSpring />
-									</div>
-								</div>
+		<div
+			className="w-full min-h-screen relative"
+		>
+			<div className="max-w-screen-lg mx-auto py-32 px-4 ">
+				<div className="grid grid-cols-5 gap-8">
+					<div className="md:col-span-3 col-span-5">
+						<SubTitle value="Sobre Mi" />
+						<div className="text-gray-300">
+							<p className="py-5 font-mono">
+								Hola!, mi nombre es Ruben Rodrigo y vivo en Arequipa, Perú. Me encanta crear software que pueda ser útil para automatizar tareas.
+							</p>
+							<p className="font-mono">
+								Empece a aprender sobre el Desarrollo de Software en el 2019 cuando inicie mi carrera en Diseño y Desarrollo de Software en Tecsup. Desde ahí me he enamorado de la programación y la informatica, por lo que siempre estoy aprendiendo nuevos temás de interes.
+							</p>
+							<p className="py-5 font-mono">
+								Actualmente me encuentro a punto de terminar mi carrera, por lo que me encuentro muy emocionado para poder buscar un trabajo donde aplicar mis habilidades.
+							</p>
+							<p>Aquí estan las tecnologías con las que he ido trabajando últimamente:</p>
+							<div className="flex gap-20">
+								<ul className="pl-5 pt-5 text-sm">
+									<li className="tracking-wider text-gray-400 flex gap-3 py-1">
+										<BiRightArrow className="self-center" />
+										<h3>
+											Python 3
+										</h3>
+									</li>
+									<li className="tracking-wider text-gray-400 flex gap-3 py-1">
+										<BiRightArrow className="self-center" />
+										<h3>
+											Typescript
+										</h3>
+									</li>
+									<li className="tracking-wider text-gray-400 flex gap-3 py-1">
+										<BiRightArrow className="self-center" />
+										<h3>
+											Docker
+										</h3>
+									</li>
+								</ul>
+								<ul className="pl-5 pt-5 text-sm">
+									<li className="tracking-wider text-gray-400 flex gap-3 py-1">
+										<BiRightArrow className="self-center" />
+										<h3>
+											Django
+										</h3>
+									</li>
+									<li className="tracking-wider text-gray-400 flex gap-3 py-1">
+										<BiRightArrow className="self-center" />
+										<h3>
+											React y NextJS
+										</h3>
+									</li>
+									<li className="tracking-wider text-gray-400 flex gap-3 py-1">
+										<BiRightArrow className="self-center" />
+										<h3>
+											MongoDB y PostgreSQL
+										</h3>
+									</li>
+								</ul>
 							</div>
+							<p>Puedes revisar mi
+								<a href="https://www.linkedin.com/in/ruben-cha%C3%B1i-3743641b4/" target="_blank" rel="noreferrer">
+									Linkedin aquí
+								</a>
+							</p>
+						</div>
+					</div>
+					<div className="md:col-span-2 col-span-5 p-2 md:px-0 place-self-center relative">
+						<div className="img-profile relative">
+							<img src={ProfileImage} alt="" className="rounded-lg relative z-10" />
 						</div>
 					</div>
 				</div>

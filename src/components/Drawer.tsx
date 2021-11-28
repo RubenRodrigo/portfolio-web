@@ -1,15 +1,13 @@
-import { FaFacebookF, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
+import { FaFacebookF, FaGithub, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
 import { AiOutlineClose } from 'react-icons/ai';
-import { NavItem } from '../interfaces/NavItem';
 import { NavItems } from '../staticData';
 
 interface Props {
 	isOpen: boolean;
 	setIsOpen: (active: boolean) => void;
-	handleClickNavItem: (navItem: NavItem) => void;
 }
 
-export const Drawer = ({ isOpen, setIsOpen, handleClickNavItem }: Props) => {
+export const Drawer = ({ isOpen, setIsOpen }: Props) => {
 	return (
 		<aside
 			className={`${isOpen ? '-translate-x-0' : 'translate-x-full'} transform overflow-auto w-screen h-screen fixed right-0 top-0 z-30 transition-all duration-500 ease-in-out flex`}
@@ -36,24 +34,34 @@ export const Drawer = ({ isOpen, setIsOpen, handleClickNavItem }: Props) => {
 							{
 								NavItems.map(item => (
 									<div key={item.id}>
-										<h2
-											className="text-2xl font-bold py-2 hover:text-white transition-colors duration-500 ease-linear cursor-pointer"
-											onClick={() => handleClickNavItem(item)}
-										>
-											{item.title}
-										</h2>
+										<a href={`/#${item.titleId}`}>
+											<h2
+												className="text-2xl font-bold py-2 hover:text-white transition-colors duration-500 ease-linear cursor-pointer"
+											>
+												{item.title}
+											</h2>
+										</a>
 									</div>
 								))
 							}
 						</div>
 						<div className="flex-initial flex flex-col px-6 pb-20 gap-5">
 							<div className="flex-initial flex gap-10 text-xl">
-								<FaFacebookF />
-								<FaLinkedinIn />
-								<FaTwitter />
+								<a target="_blank" rel="noreferrer" href="https://github.com/RubenRodrigo" className="hover:text-yellow-400 transform hover:-translate-y-1 p-2 transition text-gray-300">
+									<FaFacebookF />
+								</a>
+								<a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/ruben-cha%C3%B1i-3743641b4/" className="hover:text-yellow-400 transform hover:-translate-y-1 p-2 transition text-gray-300">
+									<FaLinkedinIn />
+								</a>
+								<a target="_blank" rel="noreferrer" href="https://twitter.com/cinnaba79941532" className="hover:text-yellow-400 transform hover:-translate-y-1 p-2 transition text-gray-300">
+									<FaTwitter />
+								</a>
+								<a target="_blank" rel="noreferrer" href="https://www.facebook.com/ruben.chani.509" className="hover:text-yellow-400 transform hover:-translate-y-1 p-2 transition text-gray-300">
+									<FaGithub />
+								</a>
 							</div>
 							<div className="flex-initial">
-								<h1>© Rodrigo 2021. No se que poner.</h1>
+								<h1>© Rodrigo 2021. Todos los derechos reservados.</h1>
 							</div>
 						</div>
 					</div>

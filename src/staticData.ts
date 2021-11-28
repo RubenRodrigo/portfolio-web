@@ -3,22 +3,27 @@ import { NavItem } from "./interfaces/NavItem";
 export const NavItems: NavItem[] = [
 	{
 		id: 0,
-		title: "Inicio"
+		title: "Inicio",
+		titleId: "home",
 	},
 	{
 		id: 1,
-		title: "Perfil Profesional"
+		title: "Perfil Profesional",
+		titleId: "profile",
 	},
 	{
 		id: 2,
-		title: "Proyectos"
+		title: "Proyectos",
+		titleId: "projects",
 	},
 	{
 		id: 3,
-		title: "Noticia"
+		title: "Noticia",
+		titleId: "news",
 	},
 	{
 		id: 4,
-		title: "Networking"
+		title: "Networking",
+		titleId: "networking",
 	},
 ]

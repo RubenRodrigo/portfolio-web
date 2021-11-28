@@ -1,49 +1,60 @@
-import { NavItem } from '../interfaces/NavItem'
 import { Drawer } from "./Drawer";
-import { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { LogoComponent } from './LogoComponent';
-interface Props {
-	setNewNavState: (navItem: NavItem) => void
-}
 
-export const Navbar = ({ setNewNavState }: Props) => {
+export const Navbar = () => {
 
+	const navRef = useRef<HTMLDivElement>(null)
 	const [isOpen, setIsOpen] = useState(false);
-
-	const handleClickNavItem = (item: NavItem) => {
-		setNewNavState(item);
-	}
-
 	const [colorChange, setColorchange] = useState(false);
 
-	const changeNavbarColor = () => {
-		var slide = document.querySelectorAll<any>('.swiper-slide-active')[0];
-		if (slide.scrollTop >= 50) {
-			setColorchange(true);
+	useEffect(() => {
+		const onScroll: EventListener = (e: Event) => {
+			if (navRef.current) {
+				const newShowNav = window.scrollY > navRef.current.clientHeight - 50
+				if (newShowNav) {
+					setColorchange(true)
+				} else {
+					setColorchange(false)
+				}
+			}
 		}
-		else {
-			setColorchange(false);
+
+		document.addEventListener("scroll", onScroll)
+
+		return () => {
+			document.removeEventListener("scroll", onScroll)
 		}
-	};
+
+	}, [])
 
 	return (
 		<>
-			<div className={`${colorChange ? "bg-background shadow-lg" : ""} w-full fixed z-10`}>
-				<div className="flex justify-between md:px-10 py-5 px-5">
-					<div className="flex-1 flex gap-10">
+			<div
+				ref={navRef}
+				className={`${colorChange ? "nav-active" : ""} w-full fixed z-20`}
+			>
+				<div className="flex justify-between py-2 md:py-5 px-4 md:px-16 ">
+					<div className="flex-initial">
 						<LogoComponent />
-						<div className="flex-1 md:gap-5 hidden md:flex self-center">
-							<h1 className="font-bold text-gray-200">
+					</div>
+					<div className="flex-1 flex gap-10 justify-end">
+						<div className="flex-1 md:gap-5 hidden md:flex self-center justify-end">
+							<h1 className="font-bold text-gray-200 border-animated">
 								+51 963 566 493
 							</h1>
 							<span className="font-bold text-gray-500">/</span>
-							<h1 className="font-bold text-gray-200">
+							<h1 className="font-bold text-gray-200 relative border-animated">
 								rodrigohde905@gmail.com
 							</h1>
+							<span className="font-bold text-gray-500">/</span>
+							<a href="/RubenRodrigo-CV.pdf" target="_blank">
+								<h1 className="font-bold text-gray-200 relative border-animated">
+									Descarga mi CV
+								</h1>
+							</a>
 						</div>
-					</div>
-					<div className="flex-initial flex">
 						<button
 							className="text-4xl self-center text-gray-300"
 							onClick={() => setIsOpen(true)}
@@ -54,7 +65,7 @@ export const Navbar = ({ setNewNavState }: Props) => {
 				</div>
 			</div>
 			{
-				<Drawer isOpen={isOpen} setIsOpen={setIsOpen} handleClickNavItem={handleClickNavItem} />
+				<Drawer isOpen={isOpen} setIsOpen={setIsOpen} />
 			}
 		</>
 	)

@@ -1,113 +1,49 @@
-import { NavItem } from '../interfaces/NavItem'
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/swiper.min.css";
-import "swiper/components/pagination/pagination.min.css"
-// import Swiper core and required modules
-import SwiperCore, {
-	Mousewheel, Pagination
-} from 'swiper';
 import { Home } from './pages/Home';
 import { Profile } from './pages/Profile';
 import { Projects } from './pages/Projects';
 import { News } from './pages/News';
 import { Networking } from './pages/Networking';
-import { useEffect, useState } from 'react';
-
-interface Props {
-	navItem: NavItem
-}
+import { FiFacebook, FiGithub, FiLinkedin, FiTwitter } from 'react-icons/fi';
 
 // install Swiper modules
-SwiperCore.use([Mousewheel, Pagination]);
-export const Container = ({ navItem }: Props) => {
-
-	const pagination = {
-		"clickable": true,
-		"renderBullet": function (index: number, className: String) {
-
-			return '<span class="' + className + '"></span>';
-
-		}
-	}
-	const [swiperInstance, setSwiperInstance] = useState<SwiperCore | null>(null);
-
-	const swiperScroll = function () {
-		var acs = document.querySelectorAll<any>('.swiper-slide-active')[0];
-		var child = acs.firstChild;
-		console.log(child);
-		console.log("child", child.scrollHeight);
-		console.log("acs", acs.clientHeight);
-
-		var hasVerticalScrollbar = child.scrollHeight > acs.clientHeight;
-		console.log(hasVerticalScrollbar);
-
-		if (hasVerticalScrollbar) {
-			var scrollHeight = child.scrollHeight;
-			var slideSize = acs.swiperSlideSize;
-			var scrollDifferenceTop = scrollHeight - slideSize;
-
-			acs.addEventListener('wheel', (event: any) => {
-				var scrollDifference = scrollHeight - slideSize - child.scrollTop;
-
-				// Scroll wheel browser compatibility
-				var delta = event.wheelDelta || -1 * event.deltaY;
-
-				// Enable scrolling if at edges
-				var spos = delta < 0 ? 0 : scrollDifferenceTop;
-
-				if (!(scrollDifference === spos)) {
-					swiperInstance?.mousewheel.disable()
-				}
-				else {
-					swiperInstance?.mousewheel.enable()
-				}
-			});
-
-		}
-	};
-
-	const slideTo = (index: number) => {
-		swiperInstance && swiperInstance.slideTo(index + 1, 1000);
-	};
-
-	useEffect(() => {
-		if (swiperInstance) {
-			slideTo(navItem.id);
-		}
-	}, [navItem])
+export const Container = () => {
 
 	return (
-		<div className="relative h-screen w-full text-white bg-main-background" >
-			<Swiper
-				onSwiper={(s) => setSwiperInstance(s)}
-				direction={'vertical'}
-				slidesPerView={1}
-				mousewheel={true}
-				loop={true}
-				pagination={pagination}
-				onSlideChangeTransitionEnd={swiperScroll}
-				allowTouchMove={false}
-				speed={500}
-				className="h-screen">
-				<SwiperSlide virtualIndex={0}>
-					<Home />
-				</SwiperSlide>
-				<SwiperSlide virtualIndex={1}>
-					<Profile />
-				</SwiperSlide>
-				<SwiperSlide virtualIndex={2}>
-					<Projects />
-				</SwiperSlide>
-				<SwiperSlide virtualIndex={3}>
-					<News />
-				</SwiperSlide>
-				<SwiperSlide virtualIndex={4}>
-					<Networking />
-				</SwiperSlide>
-			</Swiper>
+		<div className="bg-background relative" >
+			<div id="home">
+				<Home />
+			</div>
+			<div id="profile">
+				<Profile />
+			</div>
+			<div id="projects">
+				<Projects />
+			</div>
+			<div id="news">
+				<News />
+			</div>
+			<div id="networking">
+				<Networking />
+			</div>
+			<div className="hidden fixed bottom-0 left-10 orientation orientation-left md:flex flex-col gap-5 z-20">
+				<div className="flex flex-col gap-5">
+					<a target="_blank" rel="noreferrer" href="https://github.com/RubenRodrigo" className="hover:text-yellow-400 transform hover:-translate-y-1 p-2 transition text-gray-300">
+						<FiGithub className="h-6 w-6" />
+					</a>
+					<a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/ruben-cha%C3%B1i-3743641b4/" className="hover:text-yellow-400 transform hover:-translate-y-1 p-2 transition text-gray-300">
+						<FiLinkedin className="h-6 w-6" />
+					</a>
+					<a target="_blank" rel="noreferrer" href="https://twitter.com/cinnaba79941532" className="hover:text-yellow-400 transform hover:-translate-y-1 p-2 transition text-gray-300">
+						<FiTwitter className="h-6 w-6" />
+					</a>
+					<a target="_blank" rel="noreferrer" href="https://www.facebook.com/ruben.chani.509" className="hover:text-yellow-400 transform hover:-translate-y-1 p-2 transition text-gray-300">
+						<FiFacebook className="h-6 w-6" />
+					</a>
+				</div>
+			</div>
+			<div className="hidden fixed bottom-0 right-10 orientation orientation-right md:flex flex-col gap-5 z-20">
+				<a href="/" className="hover:text-yellow-400 transform hover:-translate-y-1 p-2 transition text-gray-300 font-mono">rodrigohde905@gmail.com</a>
+			</div>
 		</div >
 	)
 }

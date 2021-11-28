@@ -1,33 +1,84 @@
+import { SubTitle } from "../SubTitle"
+import { BiLinkExternal } from "react-icons/bi"
+import { FiGithub } from "react-icons/fi"
+
+import MonasterioImg from "../../assets/monasterio_img.png"
+import GreenpureImg from "../../assets/greenpure_img.png"
+
 export const Projects = () => {
 	return (
-		<div className="relative w-full h-full overflow-y-auto">
-			<div className="absolute top-2/4 xl:flex hidden z-10">
-				<div className="self-center">
-					<h3
-						className="font-bold relative text-8xl text-gray-title opacity-40 lg:left-1/4 top-2/4"
-						style={{ transform: "translate(-60%,-50%) rotate(-90deg)" }}
-					>
-						Proyectos
-					</h3>
+		<div
+			className="w-full min-h-screen relative"
+		>
+			<div className="max-w-screen-lg mx-auto py-32 md:px-20 lg:px-1 px-4">
+				<div className="px-20 pb-16">
+					<SubTitle value="Proyectos que he trabajado" />
 				</div>
-			</div>
-			<div className="relative min-h-full w-full">
-				<div className="absolute top-0 left-0 w-full h-full bg-background-profile z-0">
-				</div>
-				<div
-					className="relative z-10 min-h-screen bg-opacity-60 bg-black w-full pt-24 md:pt-28 lg:pt-32"
-				>
-					<div className="max-w-screen-xl mx-auto ">
-						<div className="grid grid-cols-3 gap-10">
-							<div className="col-span-3 lg:col-span-1 card-project">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita cum libero, illum saepe, itaque repellat rerum aliquam deserunt alias odit consequuntur laboriosam nesciunt voluptate amet accusamus hic quo reiciendis esse non. Architecto inventore autem aut quas ipsum qui aperiam, placeat ut molestias facere perferendis quo voluptatum temporibus quos enim, sapiente rerum doloremque. Consequatur tenetur a incidunt, rerum voluptatibus ducimus asperiores sunt commodi maiores optio, aut iusto quisquam facilis quod vel omnis dolores at molestias laboriosam autem! Culpa ipsum sunt facere sequi deserunt ab eveniet dolor aliquid debitis in suscipit sint, omnis aliquam optio corrupti. Perspiciatis nobis corporis autem nulla.
+				<div className="grid grid-cols-5 relative pb-10 md:pb-32">
+					<div className="col-span-5 md:col-span-3">
+						<a target="_blank" rel="noreferrer" href="https://monasterio.pe/" >
+							<div className="link-image relative">
+								<img src={MonasterioImg} alt="Monasterio" className="relative rounded-lg" />
 							</div>
-							<div className="col-span-3 lg:col-span-1 card-project">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita cum libero, illum saepe, itaque repellat rerum aliquam deserunt alias odit consequuntur laboriosam nesciunt voluptate amet accusamus hic quo reiciendis esse non. Architecto inventore autem aut quas ipsum qui aperiam, placeat ut molestias facere perferendis quo voluptatum temporibus quos enim, sapiente rerum doloremque. Consequatur tenetur a incidunt, rerum voluptatibus ducimus asperiores sunt commodi maiores optio, aut iusto quisquam facilis quod vel omnis dolores at molestias laboriosam autem! Culpa ipsum sunt facere sequi deserunt ab eveniet dolor aliquid debitis in suscipit sint, omnis aliquam optio corrupti. Perspiciatis nobis corporis autem nulla.
+						</a>
+					</div>
+					<div className="col-span-5 text-right md:col-span-2">
+						<h4 className="text-yellow-500">Proyecto de Ecommerce</h4>
+						<h2 className="text-3xl text-gray-300">Monasterio</h2>
+						<div className="mt-5 md:absolute md:right-0  text-gray-300 font-mono z-10">
+							<div className="rounded-md bg-background-light shadow-xl p-4 w-full">
+								<p>
+									Una pagina de Ecommerce para vender productos <br /> de alpaca de alta calidad.<br /> Propidad de la empresa Nativa EIRL.
+								</p>
 							</div>
-							<div className="col-span-3 lg:col-span-1 card-project">
+							<div className="flex justify-end gap-5 pt-8 text-gray-400 text-sm">
+								<span>Python</span>
+								<span>Django</span>
+								<span>PostgreSQL</span>
+								<span>CPanel</span>
+							</div>
+							<div className="pt-4 flex justify-end gap-5">
+								<a target="_blank" rel="noreferrer" href="https://monasterio.pe/">
+									<BiLinkExternal className="text-2xl hover:text-yellow-500" />
+								</a>
 							</div>
 						</div>
+					</div>
+				</div>
+				<div className="grid grid-cols-5 relative pb-10">
+					<div className="col-span-5 md:col-span-2 text-left">
+						<h4 className="text-yellow-500">Proyecto Dashboard</h4>
+						<h2 className="text-3xl text-gray-300">GreenPure</h2>
+						<div className="mt-5 md:absolute md:left-0 text-gray-300 font-mono z-10">
+							<div className="rounded-md bg-background-light shadow-xl p-4 w-full">
+								<p>
+									Una aplicacion web que tiene como objetivo<br /> mostrarle al usuario la calidad del<br />  aire en el que se encuentra su dispositivo. <br />
+									La aplicación mide los datos del usuario y los <br /> muestra en un dashboard con <br />graficas.
+								</p>
+							</div>
+							<div className="flex justify-start gap-5 pt-8 text-gray-400 text-sm">
+								<span>Python</span>
+								<span>Django</span>
+								<span>PostgreSQL</span>
+								<span>NextJS - React</span>
+								<span>AWS</span>
+							</div>
+							<div className="pt-4 flex justify-start gap-5">
+								<a target="_blank" rel="noreferrer" href="https://green-pure-frontend.vercel.app/dashboard">
+									<BiLinkExternal className="text-2xl hover:text-yellow-500" />
+								</a>
+								<a target="_blank" rel="noreferrer" href="https://github.com/RubenRodrigo/GreenPureFrontend">
+									<FiGithub className="text-2xl hover:text-yellow-500" />
+								</a>
+							</div>
+						</div>
+					</div>
+					<div className="col-span-5 md:col-span-3">
+						<a target="_blank" rel="noreferrer" href="https://green-pure-frontend.vercel.app/dashboard" >
+							<div className="link-image relative">
+								<img src={GreenpureImg} alt="Monasterio" className="relative rounded-lg" />
+							</div>
+						</a>
 					</div>
 				</div>
 			</div>
