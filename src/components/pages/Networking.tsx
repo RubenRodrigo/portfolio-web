@@ -29,7 +29,7 @@ export const Networking = () => {
 								<h3 className="text-xl uppercase hover:text-yellow-300 tracking-wider pb-2">
 									Nativa
 								</h3>
-								<p className="font-mono text-gray-400 py-2">Es una empresa de venta de ropa de alpaca. Actualmente se mantiene buenas relaciones con el dueño de la empresa, el señor Roberto Lopez. En esta empresa se realizo las pasantias del periodo 2021.</p>
+								<p className="font-mono text-gray-400 py-2">Es una empresa de venta de ropa de alpaca. Actualmente se mantiene buenas relaciones con el dueño de la empresa, el señor <b>Roberto Lopez</b>. En esta empresa se realizo las pasantias del periodo 2021.</p>
 								<ul>
 									<li>
 										<div className="flex gap-5 py-2">
@@ -54,7 +54,7 @@ export const Networking = () => {
 										Eisenmann Contratistas Generales
 									</a>
 								</h3>
-								<p className="font-mono text-gray-400 py-2">Es una empresa del rubro de la Metal-Mecanica. Actualmente se tiene buenas relaciones con el dueño de la empresa. En esta empresa se realizo el siguiente trabajo:</p>
+								<p className="font-mono text-gray-400 py-2">Es una empresa del rubro de la Metal-Mecanica. Actualmente se tiene buenas relaciones con el dueño de la empresa, el señor <b>Juan Christian</b>. En esta empresa se realizo el siguiente trabajo:</p>
 								<ul>
 									<li>
 										<div className="flex gap-5 py-2">
