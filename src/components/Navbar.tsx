@@ -49,7 +49,7 @@ export const Navbar = () => {
 								rodrigohde905@gmail.com
 							</h1>
 							<span className="font-bold text-gray-500">/</span>
-							<a href="/RubenRodrigo-CV.pdf" target="_blank">
+							<a href="/CV_Ruben_Rodrigo.pdf" target="_blank">
 								<h1 className="font-bold text-gray-200 relative border-animated">
 									Descarga mi CV
 								</h1>
