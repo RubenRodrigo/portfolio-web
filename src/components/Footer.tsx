@@ -9,7 +9,7 @@ export const Footer = () => {
 				</div>
 				<div className="flex-initial flex gap-10 text-xl self-center">
 					<a target="_blank" rel="noreferrer" href="https://github.com/RubenRodrigo" className="hover:text-yellow-400 transform hover:-translate-y-1 p-2 transition text-gray-300">
-						<FaFacebookF />
+						<FaGithub />
 					</a>
 					<a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/ruben-cha%C3%B1i-3743641b4/" className="hover:text-yellow-400 transform hover:-translate-y-1 p-2 transition text-gray-300">
 						<FaLinkedinIn />
@@ -18,7 +18,7 @@ export const Footer = () => {
 						<FaTwitter />
 					</a>
 					<a target="_blank" rel="noreferrer" href="https://www.facebook.com/ruben.chani.509" className="hover:text-yellow-400 transform hover:-translate-y-1 p-2 transition text-gray-300">
-						<FaGithub />
+						<FaFacebookF />
 					</a>
 				</div>
 			</div>

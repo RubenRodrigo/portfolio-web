@@ -48,7 +48,7 @@ export const Drawer = ({ isOpen, setIsOpen }: Props) => {
 						<div className="flex-initial flex flex-col px-6 pb-20 gap-5">
 							<div className="flex-initial flex gap-10 text-xl">
 								<a target="_blank" rel="noreferrer" href="https://github.com/RubenRodrigo" className="hover:text-yellow-400 transform hover:-translate-y-1 p-2 transition text-gray-300">
-									<FaFacebookF />
+									<FaGithub />
 								</a>
 								<a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/ruben-cha%C3%B1i-3743641b4/" className="hover:text-yellow-400 transform hover:-translate-y-1 p-2 transition text-gray-300">
 									<FaLinkedinIn />
@@ -57,7 +57,7 @@ export const Drawer = ({ isOpen, setIsOpen }: Props) => {
 									<FaTwitter />
 								</a>
 								<a target="_blank" rel="noreferrer" href="https://www.facebook.com/ruben.chani.509" className="hover:text-yellow-400 transform hover:-translate-y-1 p-2 transition text-gray-300">
-									<FaGithub />
+									<FaFacebookF />
 								</a>
 							</div>
 							<div className="flex-initial">
