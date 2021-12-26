@@ -23,19 +23,16 @@ export const Home = () => {
 								</p>
 							</div>
 							<div className="flex">
-								<button className="px-10 py-2 rounded-sm border-2 border-yellow-600 text-yellow-200 hover:bg-yellow-600 hover:bg-opacity-30 hover:text-yellow-300 font-mono text-lg">
+								<a
+									href="mailto:rodrigohde905@gmail.com"
+									className="px-10 py-2 rounded-sm border-2 border-yellow-600 text-yellow-200 hover:bg-yellow-600 hover:bg-opacity-30 hover:text-yellow-300 font-mono text-lg"
+								>
 									Contactame !
-								</button>
+								</a>
 								<div className="flex-1 ml-10 h-px bg-white self-center">
 								</div>
-								<div className="flex-initial self-center">
-									<a
-										target="_blank"
-										rel="noreferrer"
-										href="https://drive.google.com/file/d/1u4zjRjafd1OkWLIJsbWU3rPrAzviXo-G/view?usp=sharing" className="text-white"
-									>
-										<BsPlayCircle className="w-12 h-12" />
-									</a>
+								<div className="flex-initial self-center ">
+									<BsPlayCircle className="w-12 h-12 text-white" />
 								</div>
 							</div>
 						</div>

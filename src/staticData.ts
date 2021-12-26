@@ -12,17 +12,17 @@ export const NavItems: NavItem[] = [
 		titleId: "profile",
 	},
 	{
-		id: 2,
+		id: 3,
+		title: "Habilidades",
+		titleId: "skills",
+	},
+	{
+		id: 4,
 		title: "Proyectos",
 		titleId: "projects",
 	},
 	{
-		id: 3,
-		title: "Noticia",
-		titleId: "news",
-	},
-	{
-		id: 4,
+		id: 5,
 		title: "Networking",
 		titleId: "networking",
 	},

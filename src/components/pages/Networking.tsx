@@ -9,8 +9,8 @@ export const Networking = () => {
 		<div
 			className="w-full min-h-screen relative"
 		>
-			<div className="max-w-screen-md mx-auto md:py-32 py-24 md:px-0 px-10">
-				<h3 className="text-center text-gray-200 md:text-5xl text-3xl font-mono py-10">Networking</h3>
+			<div className="max-w-screen-md mx-auto md:pt-48 pt-24 md:px-0 px-10">
+				<h3 className="text-center text-yellow-400 md:text-5xl text-3xl font-mono py-10">Networking</h3>
 				<div className="flex py-20 md:flex-row flex-col gap-10">
 					<div className="flex-1 md:flex-initial text-gray-300 flex flex-col">
 						<button
@@ -25,7 +25,7 @@ export const Networking = () => {
 					<div className="flex-1 p-2 text-gray-300">
 						{
 							jobs === 'nativa' &&
-							<div className="">
+							<div className="animate__animated animate__fadeIn">
 								<h3 className="text-xl uppercase hover:text-yellow-300 tracking-wider pb-2">
 									Nativa
 								</h3>
@@ -48,7 +48,7 @@ export const Networking = () => {
 						}
 						{
 							jobs === 'eisenmann' &&
-							<div className="">
+							<div className="animate__animated animate__fadeIn">
 								<h3 className="text-xl uppercase hover:text-yellow-300 tracking-wider pb-2">
 									<a href="https://www.facebook.com/Eisenmann-contratistas-generales-EIRL-401193107122498" target="_blank" rel="noreferrer">
 										Eisenmann Contratistas Generales

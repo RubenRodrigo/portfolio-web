@@ -45,13 +45,21 @@ export const Navbar = () => {
 								+51 963 566 493
 							</h1>
 							<span className="font-bold text-gray-500">/</span>
-							<h1 className="font-bold text-gray-200 relative border-animated">
+							<a
+								href="mailto:rodrigohde905@gmail.com"
+								className="font-bold text-gray-200 relative border-animated">
 								rodrigohde905@gmail.com
-							</h1>
+							</a>
 							<span className="font-bold text-gray-500">/</span>
 							<a href="/CV_Ruben_Rodrigo.pdf" target="_blank">
 								<h1 className="font-bold text-gray-200 relative border-animated">
 									Descarga mi CV
+								</h1>
+							</a>
+							<span className="font-bold text-gray-500">/</span>
+							<a href="/CV_Ruben_Rodrigo__English_.pdf" target="_blank">
+								<h1 className="font-bold text-gray-200 relative border-animated">
+									Download CV
 								</h1>
 							</a>
 						</div>

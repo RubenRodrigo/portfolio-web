@@ -12,10 +12,13 @@ export const Profile = () => {
 		<div
 			className="w-full min-h-screen relative"
 		>
-			<div className="max-w-screen-lg mx-auto py-32 px-4 ">
+			<div className="max-w-screen-lg mx-auto pt-32 px-4 ">
 				<div className="grid grid-cols-5 gap-8">
 					<div className="md:col-span-3 col-span-5">
 						<SubTitle value="Sobre Mi" />
+						<br />
+						<br />
+						<br />
 						<div className="text-gray-300">
 							<p className="py-5 font-mono">
 								Hola!, mi nombre es Ruben Rodrigo y vivo en Arequipa, Perú. Me encanta crear software que pueda ser útil para automatizar tareas.
@@ -24,23 +27,20 @@ export const Profile = () => {
 								Empece a aprender sobre el Desarrollo de Software en el 2019 cuando inicie mi carrera en Diseño y Desarrollo de Software en Tecsup. Desde ahí me he enamorado de la programación y la informatica, por lo que siempre estoy aprendiendo nuevos temás de interes.
 							</p>
 							<p className="py-5 font-mono">
-								Actualmente me encuentro a punto de terminar mi carrera, por lo que me encuentro muy emocionado para poder buscar un trabajo donde aplicar mis habilidades.
+								Actualmente acabo de terminar mi carrera, por lo que me encuentro muy emocionado para poder buscar un trabajo donde aplicar mis habilidades.
 							</p>
 							<p>Aquí estan las tecnologías con las que he ido trabajando últimamente:</p>
-							<div className="flex gap-20">
+							<div className="flex gap-20 pb-5">
 								<ul className="pl-5 pt-5 text-sm">
-									<li className="tracking-wider text-gray-400 flex gap-3 py-1">
-										<BiRightArrow className="self-center" />
-										<h3>
-											Python 3
-										</h3>
-									</li>
 									<li className="tracking-wider text-gray-400 flex gap-3 py-1">
 										<BiRightArrow className="self-center" />
 										<h3>
 											Typescript
 										</h3>
 									</li>
+
+								</ul>
+								<ul className="pl-5 pt-5 text-sm">
 									<li className="tracking-wider text-gray-400 flex gap-3 py-1">
 										<BiRightArrow className="self-center" />
 										<h3>
@@ -48,31 +48,12 @@ export const Profile = () => {
 										</h3>
 									</li>
 								</ul>
-								<ul className="pl-5 pt-5 text-sm">
-									<li className="tracking-wider text-gray-400 flex gap-3 py-1">
-										<BiRightArrow className="self-center" />
-										<h3>
-											Django
-										</h3>
-									</li>
-									<li className="tracking-wider text-gray-400 flex gap-3 py-1">
-										<BiRightArrow className="self-center" />
-										<h3>
-											React y NextJS
-										</h3>
-									</li>
-									<li className="tracking-wider text-gray-400 flex gap-3 py-1">
-										<BiRightArrow className="self-center" />
-										<h3>
-											MongoDB y PostgreSQL
-										</h3>
-									</li>
-								</ul>
 							</div>
-							<p>Puedes revisar mi
-								<a href="https://www.linkedin.com/in/ruben-cha%C3%B1i-3743641b4/" target="_blank" rel="noreferrer">
+							<p>Puedes revisar mi <a href="https://www.linkedin.com/in/ruben-cha%C3%B1i-3743641b4/" target="_blank" rel="noreferrer">
+								<b>
 									Linkedin aquí
-								</a>
+								</b>
+							</a>
 							</p>
 						</div>
 					</div>

@@ -34,7 +34,7 @@ export const Drawer = ({ isOpen, setIsOpen }: Props) => {
 							{
 								NavItems.map(item => (
 									<div key={item.id}>
-										<a href={`/#${item.titleId}`}>
+										<a href={`/#${item.titleId}`} onClick={() => setIsOpen(false)}>
 											<h2
 												className="text-2xl font-bold py-2 hover:text-white transition-colors duration-500 ease-linear cursor-pointer"
 											>

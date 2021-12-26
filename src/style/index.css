@@ -57,7 +57,7 @@ a {
 	content:"";
 	display:block;
 	width: 2px;
-	height: 80px;
+	height: 50px;
 	margin: 0px auto;
 	background-color: rgb(190, 190, 190);
 }

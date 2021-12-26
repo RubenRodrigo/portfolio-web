@@ -4,6 +4,7 @@ import { Projects } from './pages/Projects';
 import { News } from './pages/News';
 import { Networking } from './pages/Networking';
 import { FiFacebook, FiGithub, FiLinkedin, FiTwitter } from 'react-icons/fi';
+import { Skills } from './pages/Skills';
 
 // install Swiper modules
 export const Container = () => {
@@ -16,12 +17,15 @@ export const Container = () => {
 			<div id="profile">
 				<Profile />
 			</div>
+			<div id="skills">
+				<Skills />
+			</div>
 			<div id="projects">
 				<Projects />
 			</div>
-			<div id="news">
+			{/* <div id="news">
 				<News />
-			</div>
+			</div> */}
 			<div id="networking">
 				<Networking />
 			</div>
@@ -42,7 +46,7 @@ export const Container = () => {
 				</div>
 			</div>
 			<div className="hidden fixed bottom-0 right-10 orientation orientation-right md:flex flex-col gap-5 z-20">
-				<a href="/" className="hover:text-yellow-400 transform hover:-translate-y-1 p-2 transition text-gray-300 font-mono">rodrigohde905@gmail.com</a>
+				<a href="mailto:rodrigohde905@gmail.com" className="hover:text-yellow-400 transform hover:-translate-y-1 p-2 transition text-gray-300 font-mono">rodrigohde905@gmail.com</a>
 			</div>
 		</div >
 	)
