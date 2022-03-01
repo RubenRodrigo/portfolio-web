@@ -51,7 +51,7 @@ export const Profile = () => {
 							</div>
 							<p>Puedes revisar mi <a href="https://www.linkedin.com/in/ruben-cha%C3%B1i-3743641b4/" target="_blank" rel="noreferrer">
 								<b>
-									Linkedin aquí
+									Linkedin aquí.
 								</b>
 							</a>
 							</p>
