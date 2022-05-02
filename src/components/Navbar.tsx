@@ -20,15 +20,11 @@ export const Navbar = () => {
 				}
 			}
 		}
-
 		document.addEventListener("scroll", onScroll)
-
 		return () => {
 			document.removeEventListener("scroll", onScroll)
 		}
-
 	}, [])
-
 	return (
 		<>
 			<div
