@@ -20,15 +20,11 @@ export const Navbar = () => {
 				}
 			}
 		}
-
 		document.addEventListener("scroll", onScroll)
-
 		return () => {
 			document.removeEventListener("scroll", onScroll)
 		}
-
 	}, [])
-
 	return (
 		<>
 			<div
@@ -57,11 +53,6 @@ export const Navbar = () => {
 								</h1>
 							</a>
 							<span className="font-bold text-gray-500">/</span>
-							{/* <a href="/CV_Ruben_Rodrigo__English_.pdf" target="_blank">
-								<h1 className="font-bold text-gray-200 relative border-animated">
-									Download CV
-								</h1>
-							</a> */}
 						</div>
 						<button
 							className="text-4xl self-center text-gray-300"
